@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Al-Nahda Innovative Academy</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* --- Logo Styling --- */
+        .logo-cluster a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--primary-deep-blue, #0d2c54);
+        }
+        .site-logo {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+        .support-card {
+            background: #ffffff;
+            border: 1px solid #eef0f2;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .support-card h3 {
+            color: var(--primary-deep-blue, #0d2c54);
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container navbar">
+            <div class="logo-cluster">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Al-Nahda Academy Logo" class="site-logo">
+                    <span>Al-Nahda Academy</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="programs.html" class="nav-link">Our Programs</a></li>
+                    <li><a href="donate.html" class="nav-link active-page">Donate</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="menu-drawer-toggle" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="ui-hero-panel">
+            <div class="container">
+                <h1>Support Our Mission</h1>
+                <p>Al-Nahda Innovative Academy depends on support from individuals and partners to continue offering training, scholarships, and teacher development opportunities for refugee youth, learners, and educators. Donations help ensure that education and training remain accessible even when resources are limited.</p>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 60px 20px;">
+            <h2>Ways to Invest in Our Community</h2>
+            <div class="grid-cards">
+                <div class="support-card">
+                    <h3>Sustain Daily Education</h3>
+                    <p style="color: var(--text-dark-gray, #555555); line-height: 1.6;">Provide one-time or monthly giving options to sustain ongoing student learning tracks, baseline workshop facilities, and structural operations inside Ain Shams.</p>
+                </div>
+                <div class="support-card">
+                    <h3>Scholarship Sponsorship</h3>
+                    <p style="color: var(--text-dark-gray, #555555); line-height: 1.6;">Directly sponsor dedicated youth paths through our formal Scholarship Program, offsetting tuition fees, exams, and localized equipment configurations.</p>
+                </div>
+                <div class="support-card">
+                    <h3>Hardware & Material Gifts</h3>
+                    <p style="color: var(--text-dark-gray, #555555); line-height: 1.6;">We welcome physical donations of vital functional assets including laptops, desktop hardware, development kits, electronics units, and verified learning materials.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px; background: #0d2c54; color: #ffffff; padding: 40px; border-radius: 12px; text-align: center;">
+                <h2 style="color: #ffffff; margin-bottom: 16px;">Make a Direct Impact</h2>
+                <ul style="line-height: 1.8; margin: 0 auto 24px; max-width: 600px; text-align: left; font-size: 1.1rem; opacity: 0.95;">
+                    <li>Direct tuition support and program scholarships for refugee learners.</li>
+                    <li>Computers, essential electronic lab kits, and physical software utilities.</li>
+                    <li>Curriculum optimization maps and professional teacher pipeline resources.</li>
+                    <li>Safe, robust, and technologically equipped physical classroom spaces inside Cairo.</li>
+                </ul>
+                <p style="margin-bottom: 24px; font-weight: 700; font-size: 1.1rem;">Support a learner or teacher today and help open a path to education, skills, and opportunity.</p>
+                
+                <button class="action-btn" id="openDonateModal" style="background: #ffffff; color: #0d2c54; padding: 16px 40px; border-radius: 6px; font-weight: bold; font-size: 1.1rem; border: none; cursor: pointer;">
+                    Donate Now
+                </button>
+            </div>
+
+            <div style="margin-top: 50px; text-align: center; border-top: 1px solid #eef0f2; padding-top: 40px;">
+                <h3>Commitment to Transparency</h3>
+                <p style="max-width: 700px; margin: 0 auto; color: var(--text-dark-gray, #555555); line-height: 1.6;">Al-Nahda Innovative Academy strives to use all resources responsibly and transparently, focusing on student and teacher benefit and sustainable educational impact.</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="donateModalOverlay">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="closeDonateModal">&times;</button>
+            
+            <div id="modalStepChoice">
+                <h3 class="modal-title">Select Payment Method</h3>
+                <p class="modal-subtitle">Choose how you would like to complete your donation.</p>
+                
+                <div class="method-grid">
+                    <button class="method-option-card" id="selectCardOption">
+                        <span class="method-icon">💳</span>
+                        <strong>M-Pesa / Visa Card</strong>
+                        <span style="font-size: 0.85rem; color: #555555; margin-top: 4px;">Pay securely via Card Gateway</span>
+                    </button>
+                    
+                    <a href="https://www.gofundme.com/f/tech-education-for-refugee-kids-in-egypt" target="_blank" rel="noopener noreferrer" class="method-option-card" style="text-decoration: none; color: inherit;">
+                        <span class="method-icon">🌱</span>
+                        <strong>GoFundMe Page</strong>
+                        <span style="font-size: 0.85rem; color: #555555; margin-top: 4px;">Tech Education for Refugee Kids</span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="modalStepCardForm" style="display: none;">
+                <h3 class="modal-title">Credit / Debit Card Payment</h3>
+                <p class="modal-subtitle">Enter your details safely. Your transaction is securely encrypted.</p>
+                
+                <form id="visaPaymentForm">
+                    <div class="form-row-split">
+                        <div class="ui-field-group" style="flex: 2;">
+                            <label for="cardholderName">Cardholder Name</label>
+                            <input type="text" id="cardholderName" required class="ui-input-element" placeholder="John Doe">
+                        </div>
+                        <div class="ui-field-group" style="flex: 1;">
+                            <label for="donateAmount">Amount (USD)</label>
+                            <input type="number" id="donateAmount" required class="ui-input-element" placeholder="25" min="5">
+                        </div>
+                    </div>
+                    
+                    <div class="ui-field-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" required class="ui-input-element" placeholder="•••• •••• •••• ••••" maxlength="19">
+                    </div>
+                    
+                    <div class="form-row-split">
+                        <div class="ui-field-group">
+                            <label for="cardExpiry">Expiration Date</label>
+                            <input type="text" id="cardExpiry" required class="ui-input-element" placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="ui-field-group">
+                            <label for="cardCvc">CVC</label>
+                            <input type="password" id="cardCvc" required class="ui-input-element" placeholder="•••" maxlength="4">
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 12px; margin-top: 10px;">
+                        <button type="button" class="action-btn" id="backToMethods" style="background: #e2e8f0; color: #0f172a; flex: 1;">Back</button>
+                        <button type="submit" class="action-btn action-btn-primary" style="flex: 2;">Submit Payment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-matrix">
+            <div class="footer-brand">
+                <h3>Al-Nahda Innovative Academy</h3>
+                <p>A STEM-based learning center for refugee youth, young learners, and educators in Sadek Al Aish, Ain Shams near Metro station, Cairo, Egypt.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-meta-bottom"><p>&copy; 2026 Al-Nahda Innovative Academy. All Rights Reserved.</p></div>
+    </footer>
+
+    <script>
+        // Responsive Navigation Menu Mechanics
+        function toggleMenu() { 
+            document.getElementById('navMenu').classList.toggle('active'); 
+        }
+        
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('siteHeader');
+            if (window.scrollY > 20) { header.classList.add('scrolled'); } 
+            else { header.classList.remove('scrolled'); }
+        });
+
+        // Dynamic Payment Dialog Elements
+        const overlay = document.getElementById('donateModalOverlay');
+        const btnOpen = document.getElementById('openDonateModal');
+        const btnClose = document.getElementById('closeDonateModal');
+        const btnSelectCard = document.getElementById('selectCardOption');
+        const btnBack = document.getElementById('backToMethods');
+        
+        const viewMethods = document.getElementById('modalStepChoice');
+        const viewCardForm = document.getElementById('modalStepCardForm');
+        const paymentForm = document.getElementById('visaPaymentForm');
+
+        // Modal Presentation Triggers
+        btnOpen.addEventListener('click', () => {
+            overlay.classList.add('is-visible');
+        });
+
+        const closeModal = () => {
+            overlay.classList.remove('is-visible');
+            setTimeout(() => {
+                viewMethods.style.display = 'block';
+                viewCardForm.style.display = 'none';
+                paymentForm.reset();
+            }, 300);
+        };
+
+        btnClose.addEventListener('click', closeModal);
+        overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
+
+        // Step Routing Interactions
+        btnSelectCard.addEventListener('click', () => {
+            viewMethods.style.display = 'none';
+            viewCardForm.style.display = 'block';
+        });
+
+        btnBack.addEventListener('click', () => {
+            viewCardForm.style.display = 'none';
+            viewMethods.style.display = 'block';
+        });
+
+        // Automatic Space Formatting Engine for Donor Card field
+        document.getElementById('cardNumber').addEventListener('input', function (e) {
+            let v = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+            let matches = v.match(/\d{4,16}/g);
+            let match = matches && matches[0] || '';
+            let parts = [];
+            for (let i=0, len=match.length; i<len; i+=4) { parts.push(match.substring(i, i+4)); }
+            e.target.value = parts.length > 0 ? parts.join(' ') : v;
+        });
+
+        // Safe Transaction Submit Simulation
+        paymentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Processing Securely...';
+
+            setTimeout(() => {
+                viewCardForm.innerHTML = `
+                    <div style="text-align: center; padding: 20px 0;">
+                        <div style="font-size: 3.5rem; margin-bottom: 16px;">✨</div>
+                        <h3 style="color: #0d2c54; margin-bottom: 8px;">Thank You So Much!</h3>
+                        <p style="color: #555555; line-height: 1.6;">Your support matters immensely. A secure transaction validation step has been submitted to the encryption system hub.</p>
+                    </div>
+                `;
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

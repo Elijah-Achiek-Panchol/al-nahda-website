@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Al-Nahda Innovative Academy</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* --- Logo Styling --- */
+        .logo-cluster a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--primary-deep-blue, #0d2c54);
+        }
+        .site-logo {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* --- Hero Slider Framework --- */
+        .ui-hero-panel {
+            position: relative;
+            overflow: hidden;
+            background: #000;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        /* Slider Wrapper */
+        .hero-slider-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Individual Slides */
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out; /* Smooth cross-fade transition */
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        /* Dark High-Contrast Overlay to guarantee readability of white text */
+        .hero-slider-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 100%);
+            z-index: 2;
+        }
+
+        /* Push hero content above the slider background layers */
+        .ui-hero-panel .container {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+        }
+
+        .hero-headline {
+            color: #ffffff !important;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtext {
+            color: #f0f0f0 !important;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container navbar">
+            <div class="logo-cluster">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Al-Nahda Academy Logo" class="site-logo">
+                    <span>Al-Nahda Innovative Academy</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active-page">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="programs.html" class="nav-link">Our Programs</a></li>
+                    <li><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="menu-drawer-toggle" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with expanded 10-Photo Background Slider -->
+        <section class="ui-hero-panel">
+            <div class="hero-slider-wrapper">
+                <div class="hero-slide active" style="background-image: url('assets/images/hero-slide-1.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-slide-2.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-slide-3.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-slide-4.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-slide-5.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-slide-6.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-slide-7.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-slide-8.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-slide-9.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('assets/images/hero-slide-10.jpg');"></div>
+            </div>
+
+            <div class="container">
+                <h1 class="hero-headline">Empowering Through Innovation & Practical Education</h1>
+                <p class="hero-subtext">A STEM-based learning collective bringing robust digital competencies, career-readiness education, and advanced technology pipelines directly to community groups and youth hubs.</p>
+                <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                    <a href="programs.html" class="action-btn action-btn-primary">Explore Our Programs</a>
+                    <a href="contact.html" class="action-btn" style="background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.4); text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: 600; transition: 0.3s;">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 60px 20px;">
+            <h2>Welcome to Al-Nahda Innovative Academy</h2>
+            <p>Welcome to Al‑Nahda Innovative Academy, a Tech‑focused learning center in Ain Shams empowering refugee youth and teachers with practical skills, scholarships, and modern digital education.
+Join us to learn, teach, and build a brighter future together. Our educational spaces balance targeted methodology with direct application, establishing pathways for immediate impact and ongoing skill architecture.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-matrix">
+            <div class="footer-brand">
+                <h3>Al-Nahda Innovative Academy</h3>
+                <p>A STEM-based learning center for refugee youth, young learners, and educators in Sadek Al Aish, Ain Shams near Metro station, Cairo, Egypt.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-meta-bottom"><p>&copy; 2026 Al-Nahda Innovative Academy. All Rights Reserved.</p></div>
+    </footer>
+
+    <script>
+        function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
+        
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('siteHeader');
+            if (window.scrollY > 20) { header.classList.add('scrolled'); } 
+            else { header.classList.remove('scrolled'); }
+        });
+
+        // Dynamic 10-Image Cross-Fade Slideshow Engine
+        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlideIndex = 0;
+        const slideIntervalTime = 5000; // Rotates every 5 seconds
+
+        function advanceHeroSlider() {
+            slides[currentSlideIndex].classList.remove('active');
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length; // Dynamically wraps at 10 items
+            slides[currentSlideIndex].classList.add('active');
+        }
+
+        setInterval(advanceHeroSlider, slideIntervalTime);
+    </script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs | Al-Nahda Innovative Academy</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* --- Logo Styling --- */
+        .logo-cluster a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--primary-deep-blue, #0d2c54);
+        }
+        .site-logo {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* --- Program Layout --- */
+        .program-section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eef0f2;
+        }
+        .program-section:last-of-type {
+            border-bottom: none;
+        }
+        .program-title {
+            color: var(--primary-deep-blue, #0d2c54);
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+        .program-meta h4 {
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+        .program-list {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            line-height: 1.6;
+            color: var(--text-dark-gray, #555555);
+        }
+        .program-list li {
+            margin-bottom: 6px;
+        }
+        .join-box {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 40px;
+            border: 1px solid #eef0f2;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container navbar">
+            <div class="logo-cluster">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Al-Nahda Academy Logo" class="site-logo">
+                    <span>Al-Nahda Academy</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="programs.html" class="nav-link active-page">Our Programs</a></li>
+                    <li><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="menu-drawer-toggle" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="ui-hero-panel">
+            <div class="container">
+                <h1>Our Educational Programs</h1>
+                <p>Our programs are designed to support refugee youth, young learners, and educators with practical education, digital skills, STEM learning, language development, and teaching competencies. We focus on hands-on, project-based learning and training that connects theory with real-world application.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Program 1 -->
+            <section class="program-section">
+                <h2 class="program-title">1. Digital Literacy</h2>
+                <p>The Digital Literacy program helps learners build essential computer and internet skills for school, work, and everyday life. Our courses focus heavily on practical application to ensure students gain functional confidence.</p>
+                <div class="program-meta">
+                    <h4>What students learn:</h4>
+                    <ul class="program-list">
+                        <li>Basic computer use and typing.</li>
+                        <li>Operating systems and file management.</li>
+                        <li>Internet use, online safety, and responsible digital behavior.</li>
+                        <li>Email, communication tools, and online collaboration.</li>
+                        <li>Productivity tools such as word processing and spreadsheets.</li>
+                    </ul>
+                    <h4>Expected Outcomes:</h4>
+                    <p style="color: var(--text-dark-gray, #555555); line-height: 1.6;">Students gain confidence using computers and the internet, making them better prepared for further study, job applications, and everyday tasks.</p>
+                </div>
+            </section>
+
+            <!-- Program 2 -->
+            <section class="program-section">
+                <h2 class="program-title">2. STEM Learning</h2>
+                <p>The STEM Learning program introduces students to science, technology, engineering, and mathematics through engaging and practical activities.</p>
+                <div class="program-meta">
+                    <h4>What students learn:</h4>
+                    <ul class="program-list">
+                        <li>Scientific thinking and observation.</li>
+                        <li>Basic engineering concepts and problem-solving.</li>
+                        <li>Technology awareness and simple projects.</li>
+                        <li>Math skills applied to real-world situations.</li>
+                        <li>Teamwork and collaboration through group projects.</li>
+                    </ul>
+                    <h4>Expected Outcomes:</h4>
+                    <p style="color: var(--text-dark-gray, #555555); line-height: 1.6;">Students develop curiosity, critical thinking, and an understanding of how STEM connects to real-life challenges and opportunities.</p>
+                </div>
+            </section>
+
+            <!-- Program 3 -->
+            <section class="program-section">
+                <h2 class="program-title">3. Coding and Programming</h2>
+                <p>The Coding and Programming program helps learners explore how software and digital tools are created, starting from basic concepts and moving toward simple projects.</p>
+                <div class="program-meta">
+                    <h4>What students learn:</h4>
+                    <ul class="program-list">
+                        <li>Introduction to coding logic and structure.</li>
+                        <li>Basic programming concepts (variables, conditions, loops).</li>
+                        <li>Simple projects such as interactive programs or web pages.</li>
+                        <li>Problem-solving through writing and testing code.</li>
+                        <li>How coding connects to careers and further study.</li>
+                    </ul>
+                    <h4>Expected Outcomes:</h4>
+                    <p style="color: var(--text-dark-gray, #555555); line-height: 1.6;">Students gain early exposure to programming, build confidence in problem-solving, and see technology as something they can create with—not just consume.</p>
+                </div>
+            </section>
+
+            <!-- Program 4 -->
+            <section class="program-section">
+                <h2 class="program-title">4. Scholarship Program</h2>
+                <p>The Scholarship Program supports talented and motivated students who need financial assistance to participate in Al-Nahda Innovative Academy programs.</p>
+                <div class="program-meta">
+                    <h4>What the scholarship can support:</h4>
+                    <ul class="program-list">
+                        <li>Tuition support or fee reductions for selected courses.</li>
+                        <li>Learning materials and training resources.</li>
+                        <li>Connectivity or device support, where available.</li>
+                        <li>Certification or exam-related costs.</li>
+                        <li>Mentoring and guidance.</li>
+                    </ul>
+                    <h4>Eligibility Requirements:</h4>
+                    <ul class="program-list">
+                        <li>Refugee youth and underserved learners.</li>
+                        <li>Strong motivation to learn and participate.</li>
+                        <li>Ability to commit to attendance and completion of courses.</li>
+                        <li>Basic alignment with program requirements like age, interest, and readiness.</li>
+                    </ul>
+                    <h4>Application Process:</h4>
+                    <ol class="program-list" style="list-style-type: decimal;">
+                        <li>Complete the scholarship application form.</li>
+                        <li>Submit required documents such as ID or relevant registration and a short motivation statement.</li>
+                        <li>Take part in an interview or review process if needed.</li>
+                        <li>Receive notification of acceptance.</li>
+                        <li>Enroll and begin the program.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Program 5 -->
+            <section class="program-section">
+                <h2 class="program-title">5. Teacher Training (Modern Education Mastery Program)</h2>
+                <p>In collaboration with the African Teacher Training Network, Al-Nahda Innovative Academy offers training programs designed for primary and secondary school teachers serving refugee learning centers and diverse classrooms.</p>
+                <div class="program-meta">
+                    <h4>What teachers learn:</h4>
+                    <ul class="program-list">
+                        <li>Interactive teaching strategies suitable for learners from diverse backgrounds.</li>
+                        <li>Practical methods for using technology confidently in teaching.</li>
+                        <li>Classroom management and student engagement techniques.</li>
+                        <li>Inclusive and learner-centered approaches for refugee and marginalized students.</li>
+                        <li>Reflective practice and continuous professional development.</li>
+                    </ul>
+                    <h4>Training Format:</h4>
+                    <p style="color: var(--text-dark-gray, #555555); line-height: 1.6; margin-bottom: 16px;">Structured modules delivered over a set period combining interactive workshops, practice-based activities, and direct peer-to-peer learning formats.</p>
+                    <h4>Expected Outcomes:</h4>
+                    <ul class="program-list">
+                        <li>Teachers gain confidence and competence in modern, interactive teaching methods.</li>
+                        <li>Better learning experiences for students in refugee learning centers and schools.</li>
+                        <li>Stronger networks among teachers working across different communities and contexts.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- How to Join Box -->
+            <div class="join-box">
+                <h3 style="color: var(--primary-deep-blue, #0d2c54); margin-bottom: 16px;">How to Join Our Classes</h3>
+                <ol style="margin-left: 20px; line-height: 1.8; color: var(--text-dark-gray, #555555);">
+                    <li>Review the program descriptions above and identify the course that best matches your interests or professional needs.</li>
+                    <li>Contact the academy directly through our contact page to receive an application form or link.</li>
+                    <li>Fill in your path details and submit any required documents.</li>
+                    <li>Wait for a response from the academy team with admission or next steps.</li>
+                    <li>Begin attending classes, workshops, or training sessions.</li>
+                </ol>
+                <a href="contact.html" class="action-btn action-btn-primary" style="display: inline-block; margin-top: 20px; text-decoration: none;">Get Registration Form</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-matrix">
+            <div class="footer-brand">
+                <h3>Al-Nahda Innovative Academy</h3>
+                <p>A STEM-based learning center for refugee youth, young learners, and educators in Sadek Al Aish, Ain Shams near Metro station, Cairo, Egypt.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-meta-bottom"><p>&copy; 2026 Al-Nahda Innovative Academy. All Rights Reserved.</p></div>
+    </footer>
+
+    <script>
+        function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('siteHeader');
+            if (window.scrollY > 20) { header.classList.add('scrolled'); } 
+            else { header.classList.remove('scrolled'); }
+        });
+    </script>
+</body>
+</html>

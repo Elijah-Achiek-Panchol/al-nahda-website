@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Al-Nahda Innovative Academy</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* --- Logo Styling --- */
+        .logo-cluster a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--primary-deep-blue, #0d2c54);
+        }
+        .site-logo {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container navbar">
+            <div class="logo-cluster">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Al-Nahda Academy Logo" class="site-logo">
+                    <span>Al-Nahda Academy</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="programs.html" class="nav-link">Our Programs</a></li>
+                    <li><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="blog.html" class="nav-link active-page">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="menu-drawer-toggle" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="ui-hero-panel">
+            <div class="container">
+                <h1>Academy Insights & Updates</h1>
+                <p>Stay up to date with the latest news, stories from our classrooms, community developments, and educational resources from Al-Nahda Academy.</p>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 80px 20px; text-align: center;">
+            <div style="font-size: 4rem; margin-bottom: 24px;">2026-07-07</div>
+            <h2 style="color: var(--primary-deep-blue, #0d2c54); margin-bottom: 12px; font-size: 1.8rem;">Stories Are On the Way</h2>
+            <p style="color: var(--text-dark-gray, #555555); max-width: 500px; margin: 0 auto; line-height: 1.6; font-size: 1.1rem;">
+                We are currently preparing our first set of articles, curriculum highlights, and community updates. Check back soon!
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-matrix">
+            <div class="footer-brand">
+                <h3>Al-Nahda Innovative Academy</h3>
+                <p>A STEM-based learning center for refugee youth, young learners, and educators in Sadek Al Aish, Ain Shams near Metro station, Cairo, Egypt.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-meta-bottom"><p>&copy; 2026 Al-Nahda Innovative Academy. All Rights Reserved.</p></div>
+    </footer>
+
+    <script>
+        function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('siteHeader');
+            if (window.scrollY > 20) { header.classList.add('scrolled'); } 
+            else { header.classList.remove('scrolled'); }
+        });
+    </script>
+</body>
+</html>

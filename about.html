@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Al-Nahda Innovative Academy</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* --- Logo Styling --- */
+        .logo-cluster a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--primary-deep-blue, #0d2c54);
+        }
+        .site-logo {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* --- Team Grid Layout --- */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+        .team-card {
+            background: #ffffff;
+            padding: 35px 24px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eef0f2;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        .team-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid var(--primary-deep-blue, #0d2c54);
+            background-color: #f0f0f0;
+        }
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 6px;
+        }
+        .team-role {
+            font-size: 0.95rem;
+            color: var(--primary-deep-blue, #0d2c54);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+        .team-bio {
+            font-size: 0.95rem;
+            color: var(--text-dark-gray, #555555);
+            line-height: 1.6;
+            margin: 0;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container navbar">
+            <div class="logo-cluster">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Al-Nahda Academy Logo" class="site-logo">
+                    <span>Al-Nahda Academy</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active-page">About Us</a></li>
+                    <li><a href="programs.html" class="nav-link">Our Programs</a></li>
+                    <li><a href="donate.html" class="nav-link">Donate</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="menu-drawer-toggle" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="ui-hero-panel">
+            <div class="container">
+                <h1>Our Mission & Vision</h1>
+                <p>Al-Nahda Innovative Academy is dedicated to providing high-quality, practical STEM education, digital literacy, and professional pipelines to empower youth, refugees, and educators in Cairo, Egypt.</p>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 80px 20px;">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;">
+                <h2 style="color: var(--primary-deep-blue, #0d2c54); font-size: 2.2rem; margin-bottom: 16px;">Meet Our Dedicated Team</h2>
+                <p style="color: var(--text-dark-gray, #555555); font-size: 1.1rem; line-height: 1.6;">Our team brings together educators, engineers, volunteers, and coordinators who are committed to helping students and teachers succeed and supporting their journey through education.</p>
+            </div>
+
+            <div class="team-grid">
+                
+                <div class="team-card">
+                    <img src="assets/images/elijah.JPG" alt="Elijah Achiek Panchol" class="team-avatar">
+                    <h3 class="team-name">Elijah Achiek Panchol</h3>
+                    <p class="team-role">Cofounder</p>
+                    <p class="team-bio">Elijah is a cofounder of AlNahda Innovative Academy and an engineer with a strong background in systems and technology. He is passionate about using education and innovation to support refugee and marginalized youth, drawing on his own experience and work in digital literacy and community training.</p>
+                </div>
+
+                <div class="team-card">
+                    <img src="assets/images/Terry.JPG" alt="Terry King" class="team-avatar">
+                    <h3 class="team-name">Terry King</h3>
+                    <p class="team-role">Cofounder & Electronics Instructor</p>
+                    <p class="team-bio">Terry is a cofounder of AlNahda Innovative Academy and an electronics instructor with extensive experience in engineering and technical education. He supports students in learning practical electronics and technology skills and helps guide the academy’s development and technical programs.</p>
+                </div>
+
+                <div class="team-card">
+                    <img src="assets/images/Abuk.JPG" alt="Abuk Bul Chol" class="team-avatar">
+                    <h3 class="team-name">Abuk Bul Chol</h3>
+                    <p class="team-role">Administration & Finance</p>
+                    <p class="team-bio">Abuk manages administration and finance at AlNahda Innovative Academy. She ensures that operations run smoothly, maintains records, and supports coordination between students, instructors, partners, and programs.</p>
+                </div>
+
+                <div class="team-card">
+                    <img src="assets/images/Fernando.JPG" alt="Fernando" class="team-avatar">
+                    <h3 class="team-name">Fernando</h3>
+                    <p class="team-role">Advanced English Instructor & Student Advisor</p>
+                    <p class="team-bio">Fernando teaches advanced English and serves as a student advisor. He helps learners strengthen their language skills for academic and professional purposes and offers guidance on educational pathways, careers, and personal development.</p>
+                </div>
+
+                <div class="team-card">
+                    <img src="assets/images/Thon.JPG" alt="Thon Tor" class="team-avatar">
+                    <h3 class="team-name">Thon Tor</h3>
+                    <p class="team-role">Instructor</p>
+                    <p class="team-bio">Thon is an instructor at the academy, helping students learn practical skills and engage with STEM and digital learning. He supports classroom activities, student projects, and hands-on training.</p>
+                </div>
+
+                <div class="team-card">
+                    <img src="assets/images/Bol.JPG" alt="Bol Deng" class="team-avatar">
+                    <h3 class="team-name">Bol Deng</h3>
+                    <p class="team-role">Intern</p>
+                    <p class="team-bio">Bol is an intern at AlNahda Innovative Academy, assisting with classes, activities, and daily operations. He supports instructors and staff while gaining experience in Tech education, community work, and Electronic & programming.</p>
+                </div>
+
+                <div class="team-card">
+                    <img src="assets/images/Yusha.JPG" alt="Yusha Shiek" class="team-avatar">
+                    <h3 class="team-name">Yusha Shiek</h3>
+                    <p class="team-role">Volunteer, English Instructor & Scholarship Coordinator</p>
+                    <p class="team-bio">Yusha volunteers as an English instructor and coordinates scholarship opportunities for students. He supports learners in improving their English language skills and helps identify, support, and follow up with students who need financial assistance to join programs.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-matrix">
+            <div class="footer-brand">
+                <h3>Al-Nahda Innovative Academy</h3>
+                <p>A STEM-based learning center for refugee youth, young learners, and educators in Sadek Al Aish, Ain Shams near Metro station, Cairo, Egypt.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-meta-bottom"><p>&copy; 2026 Al-Nahda Innovative Academy. All Rights Reserved.</p></div>
+    </footer>
+
+    <script>
+        function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
+        
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('siteHeader');
+            if (window.scrollY > 20) { header.classList.add('scrolled'); } 
+            else { header.classList.remove('scrolled'); }
+        });
+    </script>
+</body>
+</html>
