@@ -6,54 +6,47 @@
     <title>Contact Us | Al-Nahda Innovative Academy</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-        .contact-wrapper {
-            padding: 60px 0;
-            background-color: #f8f9fa;
-        }
-        .contact-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .contact-header h1 {
-            font-size: 2.8rem;
-            color: var(--primary-deep-blue, #0d2c54);
-            margin-bottom: 10px;
-        }
-        .contact-header p {
-            color: var(--text-dark-gray, #555555);
-            font-size: 1.2rem;
-        }
-        .contact-matrix {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            align-items: start;
-        }
-        .contact-info-panel {
-            background: #ffffff;
-            border: 1px solid #eef0f2;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-        }
-        .info-block {
-            margin-bottom: 30px;
-        }
-        .info-block h3 {
-            color: var(--primary-deep-blue, #0d2c54);
-            margin-bottom: 8px;
-            font-size: 1.2rem;
-        }
-        .info-block p {
-            color: var(--text-dark-gray, #555555);
-            line-height: 1.6;
-        }
+        /* --- Inline Logo Alignment Fix --- */
         .logo-cluster a {
             display: flex;
             align-items: center;
             gap: 12px;
+            text-decoration: none;
             font-weight: 700;
             color: var(--primary-deep-blue, #0d2c54);
+        }
+        .site-logo {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* --- Social & Direct Communication Grid Elements --- */
+        .communication-channels {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .channel-link-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            background: var(--white, #ffffff);
+            border: 1px solid var(--border-light, #eef0f2);
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--primary-deep-blue, #0d2c54);
+            transition: all var(--transition-fast, 0.2s ease);
+        }
+        .channel-link-card:hover {
+            border-color: var(--secondary-gold, #c9a66b);
+            background-color: var(--bg-light-gray, #f8f9fa);
+            transform: translateX(4px);
+        }
+        .channel-icon {
+            font-size: 1.5rem;
         }
     </style>
 </head>
@@ -63,7 +56,7 @@
         <div class="container navbar">
             <div class="logo-cluster">
                 <a href="index.html">
-                    <img src="assets/images/logo.png" alt="Al-Nahda Academy Logo" style="height: 45px;">
+                    <img src="assets/images/logo.png" alt="Al-Nahda Academy Logo" class="site-logo">
                     <span>Al-Nahda Academy</span>
                 </a>
             </div>
@@ -83,79 +76,110 @@
         </div>
     </header>
 
-    <main class="contact-wrapper">
-        <div class="container">
+    <main>
+        <section class="ui-hero-panel">
+            <div class="container">
+                <h1>Contact Our Team</h1>
+                <p>Have questions about admissions, sponsorship options, or community programs? Get in touch with Al-Nahda Innovative Academy today.</p>
+            </div>
+        </section>
+
+        <section class="container layout-grid-2">
             
-            <div class="contact-header">
-                <h1>Get in Touch</h1>
-                <p>Have questions about our programs, sponsorships, or how to get involved? Reach out to us.</p>
+            <div class="info-presentation-column">
+                <h2>Connect Instantly</h2>
+                <p style="margin-bottom: 24px; line-height: 1.6; color: var(--text-dark-gray, #555555);">We are committed to finding, training, and helping young people. Reach out directly through any of our official network portals or community directories below.</p>
+                
+                <div class="communication-channels">
+                    <a href="+201147474094" target="_blank" rel="noopener noreferrer" class="channel-link-card">
+                        <span class="channel-icon">💬</span>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase; color: #777777; letter-spacing: 0.5px;">Chat on WhatsApp</div>
+                            <span>+201147474094</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.facebook.com/profile.php?id=100092518419756" target="_blank" rel="noopener noreferrer" class="channel-link-card">
+                        <span class="channel-icon">🌐</span>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase; color: #777777; letter-spacing: 0.5px;">Follow us on Facebook</div>
+                            <span>Al-Nahda Innovative Academy</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:your-real-alnahdacairo@gmail.com" class="channel-link-card">
+                        <span class="channel-icon">✉️</span>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase; color: #777777; letter-spacing: 0.5px;">Send an Email</div>
+                            <span>alnahdacairo@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div style="margin-top: 40px; border-top: 1px solid var(--border-light, #eef0f2); padding-top: 30px;">
+                    <h3 style="color: var(--primary-deep-blue, #0d2c54); font-size: 1.2rem; margin-bottom: 8px;">Our Physical Address</h3>
+                    <p style="line-height: 1.6; color: var(--text-dark-gray, #555555);">Sadek Al Aish, Ain Shams<br>Near Metro Station, Cairo, Egypt</p>
+                </div>
             </div>
 
-            <div class="contact-matrix">
+            <div class="ui-form-node">
+                <h3 style="margin-bottom: 24px; color: var(--primary-deep-blue, #0d2c54);">Send an Online Message</h3>
                 
-                <div class="contact-info-panel">
-                    <div class="info-block">
-                        <h3>Our Location</h3>
-                        <p>Sadek Al Aish, Ain Shams<br>Near Metro Station<br>Cairo, Egypt</p>
+                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p style="display:none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+
+                    <div class="ui-field-group">
+                        <label for="userName">Full Name</label>
+                        <input type="text" id="userName" name="name" required class="ui-input-element" placeholder="John Doe">
                     </div>
-                    
-                    <div class="info-block">
-                        <h3>Email Address</h3>
-                        <p>info@alnahdaacademy.org</p>
+
+                    <div class="ui-field-group">
+                        <label for="userEmail">Email Address</label>
+                        <input type="email" id="userEmail" name="email" required class="ui-input-element" placeholder="johndoe@example.com">
                     </div>
 
-                    <div class="info-block" style="margin-bottom: 0;">
-                        <h3>Hours of Operation</h3>
-                        <p>Sunday – Thursday: 9:00 AM – 5:00 PM<br>Friday – Saturday: Closed</p>
+                    <div class="ui-field-group">
+                        <label for="messageSubject">Topic Area</label>
+                        <select id="messageSubject" name="subject" class="ui-input-element">
+                            <option value="General Support">General Support Request</option>
+                            <option value="Student Sponsorship">Student Sponsorship Plans</option>
+                            <option value="Curriculum Partnership">Curriculum & Teaching Options</option>
+                        </select>
                     </div>
-                </div>
 
-                <div class="ui-form-node">
-                    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-                        
-                        <input type="hidden" name="form-name" value="contact" />
-                        <p style="display:none;">
-                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                        </p>
+                    <div class="ui-field-group" style="margin-bottom: 30px;">
+                        <label for="userMessage">Message Text</label>
+                        <textarea id="userMessage" name="message" required class="ui-input-element" rows="6" placeholder="Describe your inquiry explicitly here..." style="resize: vertical; font-family: inherit;"></textarea>
+                    </div>
 
-                        <div class="ui-field-group">
-                            <label for="formName">Your Full Name</label>
-                            <input type="text" id="formName" name="name" required class="ui-input-element" placeholder="John Doe">
-                        </div>
+                    <button type="submit" class="action-btn action-btn-primary" style="width: 100%;">
+                        Submit Secure Form
+                    </button>
+                </form>
+            </div>
 
-                        <div class="ui-field-group">
-                            <label for="formEmail">Email Address</label>
-                            <input type="email" id="formEmail" name="email" required class="ui-input-element" placeholder="johndoe@example.com">
-                        </div>
-
-                        <div class="ui-field-group">
-                            <label for="formSubject">Subject</label>
-                            <select id="formSubject" name="subject" class="ui-input-element">
-                                <option value="General Inquiry">General Inquiry</option>
-                                <option value="Student Sponsorship">Student Sponsorship</option>
-                                <option value="Program Enrollment">Program Enrollment</option>
-                                <option value="Volunteering/Teaching">Volunteering / Teaching</option>
-                            </select>
-                        </div>
-
-                        <div class="ui-field-group" style="margin-bottom: 30px;">
-                            <label for="formMessage">Your Message</label>
-                            <textarea id="formMessage" name="message" required class="ui-input-element" rows="5" placeholder="Write your message here..." style="resize: vertical; font-family: inherit;"></textarea>
-                        </div>
-
-                        <button type="submit" class="action-btn action-btn-primary" style="width: 100%;">
-                            Send Secure Message
-                        </button>
-                    </form>
-                </div>
-
-            </div> </div> </main>
+        </section>
+    </main>
 
     <footer class="site-footer">
         <div class="container footer-matrix">
             <div class="footer-brand">
                 <h3>Al-Nahda Innovative Academy</h3>
                 <p>A STEM-based learning center for refugee youth, young learners, and educators in Sadek Al Aish, Ain Shams near Metro station, Cairo, Egypt.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
             </div>
         </div>
         <div class="footer-meta-bottom"><p>&copy; 2026 Al-Nahda Innovative Academy. All Rights Reserved.</p></div>
@@ -165,6 +189,12 @@
         function toggleMenu() { 
             document.getElementById('navMenu').classList.toggle('active'); 
         }
+
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('siteHeader');
+            if (window.scrollY > 20) { header.classList.add('scrolled'); } 
+            else { header.classList.remove('scrolled'); }
+        });
     </script>
 </body>
 </html>
