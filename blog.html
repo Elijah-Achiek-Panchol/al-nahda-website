@@ -3,32 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Al-Nahda Innovative Academy</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Blog & Stories | Al-Nahda Innovative Academy</title>
+    <link rel="stylesheet" href="assets/CSS/styles.css">
     <style>
-        /* --- Logo Styling --- */
+        .blog-wrapper {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        .blog-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .blog-header h1 {
+            font-size: 2.8rem;
+            color: var(--primary-deep-blue, #0d2c54);
+            margin-bottom: 10px;
+        }
+        .blog-header p {
+            color: var(--text-dark-gray, #555555);
+            font-size: 1.2rem;
+        }
+        .blog-posts-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .blog-card {
+            background: #ffffff;
+            border: 1px solid #eef0f2;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+        }
+        .blog-card-img-box {
+            flex: 1 1 200px;
+            max-width: 240px;
+        }
+        .blog-card-img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            height: 180px;
+        }
+        .blog-card-content {
+            flex: 2 1 400px;
+        }
+        .blog-tag {
+            color: var(--secondary-gold, #c9a66b);
+            font-weight: bold;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .blog-card-title {
+            margin: 6px 0 12px;
+            color: var(--primary-deep-blue, #0d2c54);
+            font-size: 1.5rem;
+            line-height: 1.3;
+        }
+        .blog-card-excerpt {
+            color: var(--text-dark-gray, #555555);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .blog-read-more {
+            color: var(--primary-deep-blue, #0d2c54);
+            font-weight: bold;
+            text-decoration: underline;
+        }
         .logo-cluster a {
             display: flex;
             align-items: center;
             gap: 12px;
-            text-decoration: none;
             font-weight: 700;
             color: var(--primary-deep-blue, #0d2c54);
-        }
-        .site-logo {
-            height: 45px;
-            width: auto;
-            object-fit: contain;
         }
     </style>
 </head>
 <body>
 
+    <!-- ==========================================================================
+       Navigation Header
+       ========================================================================== -->
     <header class="site-header" id="siteHeader">
         <div class="container navbar">
             <div class="logo-cluster">
                 <a href="index.html">
-                    <img src="assets/images/logo.png" alt="Al-Nahda Academy Logo" class="site-logo">
+                    <img src="assets/images/logo.png" alt="Al-Nahda Academy Logo" style="height: 45px;">
                     <span>Al-Nahda Academy</span>
                 </a>
             </div>
@@ -48,51 +118,58 @@
         </div>
     </header>
 
-    <main>
-        <section class="ui-hero-panel">
-            <div class="container">
-                <h1>Academy Insights & Updates</h1>
-                <p>Stay up to date with the latest news, stories from our classrooms, community developments, and educational resources from Al-Nahda Academy.</p>
+    <!-- ==========================================================================
+       Main Blog Directory Space
+       ========================================================================== -->
+    <main class="blog-wrapper">
+        <div class="container">
+            
+            <!-- Page Heading Title Banner -->
+            <div class="blog-header">
+                <h1>Our Blog & Stories</h1>
+                <p>Updates, milestones, and inspiring journeys from Al-Nahda Innovative Academy</p>
             </div>
-        </section>
 
-        <section class="container" style="padding: 80px 20px; text-align: center;">
-            <div style="font-size: 4rem; margin-bottom: 24px;">2026-07-07</div>
-            <h2 style="color: var(--primary-deep-blue, #0d2c54); margin-bottom: 12px; font-size: 1.8rem;">Stories Are On the Way</h2>
-            <p style="color: var(--text-dark-gray, #555555); max-width: 500px; margin: 0 auto; line-height: 1.6; font-size: 1.1rem;">
-                We are currently preparing our first set of articles, curriculum highlights, and community updates. Check back soon!
-            </p>
-        </section>
+            <!-- The Blog Posts Container -->
+            <div class="blog-posts-grid">
+
+                <!-- FEATURED POST: Ngong Ding Ding's Story -->
+                <article class="blog-card">
+                    <div class="blog-card-img-box">
+                        <img src="assets/images/Ngong.JPG" alt="Ngong Ding Ding, South Sudanese student at Al-Nahda Academy" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-tag">Student Spotlight</span>
+                        <h3 class="blog-card-title">Driven to Excel: How 17-Year-Old Ngong Shines Against All Odds</h3>
+                        <p class="blog-card-excerpt">Discover the resilience of Ngong Ding Ding, a top-performing South Sudanese student at Al-Nahda whose path from conflict to academic leadership highlights the true power of educational support.</p>
+                        <a href="blog-ngong-story.html" class="blog-read-more">Read Ngong's Full Story &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- More cards can be placed right below this line as you add more stories -->
+
+            </div> <!-- /blog-posts-grid -->
+
+        </div> <!-- /container -->
     </main>
 
+    <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
     <footer class="site-footer">
         <div class="container footer-matrix">
             <div class="footer-brand">
                 <h3>Al-Nahda Innovative Academy</h3>
                 <p>A STEM-based learning center for refugee youth, young learners, and educators in Sadek Al Aish, Ain Shams near Metro station, Cairo, Egypt.</p>
             </div>
-            <div class="footer-nav">
-                <h4>Quick Links</h4>
-                <ul class="footer-nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="programs.html">Our Programs</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-            </div>
         </div>
         <div class="footer-meta-bottom"><p>&copy; 2026 Al-Nahda Innovative Academy. All Rights Reserved.</p></div>
     </footer>
 
     <script>
-        function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('siteHeader');
-            if (window.scrollY > 20) { header.classList.add('scrolled'); } 
-            else { header.classList.remove('scrolled'); }
-        });
+        function toggleMenu() { 
+            document.getElementById('navMenu').classList.toggle('active'); 
+        }
     </script>
 </body>
 </html>
